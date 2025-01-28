@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding-top: 60px;
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.navbar {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #252525; 
+    padding: 0 20px;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar-left ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px; 
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-left a {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center; 
+}
+
+.navbar-left .logo {
+    width: 40px; 
+    height: auto;
+    margin-right: 15px; 
+}
+
+
+
+.navbar-left a:hover {
+    background-color: #333;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-right button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+    color: white;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar-right button:hover {
+    background-color: #c0392b;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #e74c3c;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 1em;
+    padding: 20px 0; 
+    position: relative;
+    bottom: 0;
+}
+
+.footer-link {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.manga-gallery {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 40px 0;
+}
+
+.manga-gallery h2 {
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+.manga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+    minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.manga-card {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    width: 150px;
+}
+
+.manga-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.manga-card h3 {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.manga-card p {
+    font-size: 0.9em;
+}
+
+.manga-card, .intro, .faq-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.manga-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.manga-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.search-bar {
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #c0392b;
+}
+
+
+.faq-section {
+    background-color: #252525;
+    padding: 40px 20px;
+    color: white;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.faq-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+.faq-item details {
+    background-color: #333;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.faq-item summary {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item summary:hover {
+    background-color: #555;
+}
+
+.faq-item p {
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    color: #ddd;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.faq-item details[open] summary {
+    background-color: #e74c3c;
+}
+
+.faq-item details[open] p {
+    background-color: #333;
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-section {
+    background-color: #252525;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.contact-section h2 {
+    color: #e74c3c;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon img {
+    transition: transform 0.3s;
+    border-radius: 50%;
+    border: 2px solid #e74c3c;
+    padding: 5px;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: #333; /* Warna latar belakang tetap gelap */
+    color: #fff; /* Teks putih untuk kontras */
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Efek bayangan lebih lembut */
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff; /* Judul tetap putih */
+}
+
+.modal-content input {
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #555; /* Border dengan warna abu-abu gelap */
+    font-size: 16px;
+    background-color: #444; /* Latar belakang input lebih gelap */
+    color: white;
+}
+
+.modal-content input:focus {
+    outline: none;
+    border-color: #e74c3c; /* Fokus dengan warna merah */
+}
+
+.modal-content button {
+    padding: 12px 20px;
+    background-color: #e74c3c; /* Warna merah untuk tombol */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.modal-content button:hover {
+    background-color: #c0392b; /* Warna merah lebih gelap saat hover */
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #fff; /* Tombol close putih */
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.modal-content .close:hover {
+    color: #e74c3c; /* Warna merah saat hover */
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+label {
+    font-size: 14px;
+    color: #fff; /* Mengatur warna teks label */
+    margin-top: 10px;
+    display: block;
+    text-align: left;
+}
+
