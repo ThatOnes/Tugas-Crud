@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #252525;
+    padding: 0 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Memberikan jarak antara logo dan navbar-center */
+}
+
+.navbar-left .logo {
+    width: 50px;
+    height: auto;
+}
+
+.navbar-center {
+    display: flex;
+}
+
+.navbar-center ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-center a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
+
+.navbar-center a:hover {
+    background-color: #333;
+}
+
+.navbar-right {
+    margin-left: auto; /* Menggeser elemen ke paling kanan */
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 150px;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #e74c3c;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+}
+
+
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    width: 450px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #c0392b;
+}
+
+
+
+ .cover-anime {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 40px auto;
+    max-width: 1200px;
+  }
+
+  .cover-anime h2 {
+    margin-bottom: 20px;
+    color: #e74c3c;
+  }
+
+  .anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px; /* Jarak antar cover lebih rapat */
+    justify-items: center;
+    margin-bottom: 20px;
+  }
+
+  .anime-card {
+    position: relative;
+    background-color: #333;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    width: 150px; /* Ukuran tetap seragam */
+    transition: transform 0.3s ease;
+  }
+
+  .anime-card img {
+    width: 100%;
+    height: 200px; /* Tinggi gambar seragam */
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .anime-card:hover {
+    transform: scale(1.05);
+  }
+
+  .anime-card a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .anime-card a:hover .card-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+
+  .anime-card h3 {
+    margin: 10px 0;
+    font-size: 1em;
+  }
+
+  .anime-card p {
+    font-size: 0.85em;
+    margin: 0 0 10px;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: white;
+    background: #333;
+    padding: 5px 10px; /* Ukuran lebih kecil */
+    margin: 0 6px;
+    border-radius: 4px; /* Membuat sudut sedikit melengkung */
+    font-size: 17px; /* Ukuran font kecil */
+    transition: background 0.3s ease;
+}
+
+.pagination a.active {
+    background: #ff4500; /* Warna untuk halaman aktif */
+}
+
+.pagination a.active:hover {
+    background: #555; /* Warna hover */
+}
+
+.pagination a:hover{
+    background: #ff4500;
+}
+
+.dots {
+    color: #1c1c1c;
+}
+
+
+
+
+
+
+.faq-section {
+    background-color: #252525;
+    padding: 40px 20px;
+    color: white;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.faq-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+.faq-item details {
+    background-color: #333;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.faq-item summary {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item summary:hover {
+    background-color: #555;
+}
+
+.faq-item p {
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    color: #ddd;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.faq-item details[open] summary {
+    background-color: #e74c3c;
+}
+
+.faq-item details[open] p {
+    background-color: #333;
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-section {
+    background-color: #252525;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.contact-section h2 {
+    color: #e74c3c;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon img {
+    transition: transform 0.3s;
+    border-radius: 50%;
+    border: 2px solid #e74c3c;
+    padding: 5px;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: #333; /* Warna latar belakang tetap gelap */
+    color: #fff; /* Teks putih untuk kontras */
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Efek bayangan lebih lembut */
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff; /* Judul tetap putih */
+}
+
+.modal-content input {
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #555; /* Border dengan warna abu-abu gelap */
+    font-size: 16px;
+    background-color: #444; /* Latar belakang input lebih gelap */
+    color: white;
+}
+
+.modal-content input:focus {
+    outline: none;
+    border-color: #e74c3c; /* Fokus dengan warna merah */
+}
+
+.modal-content button {
+    padding: 12px 20px;
+    background-color: #e74c3c; /* Warna merah untuk tombol */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.modal-content button:hover {
+    background-color: #c0392b; /* Warna merah lebih gelap saat hover */
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #fff; /* Tombol close putih */
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.modal-content .close:hover {
+    color: #e74c3c; /* Warna merah saat hover */
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+label {
+    font-size: 14px;
+    color: #fff; /* Mengatur warna teks label */
+    margin-top: 10px;
+    display: block;
+    text-align: left;
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 1em;
+    padding: 20px 0; 
+    position: relative;
+    bottom: 0;
+}
+
+.footer-link {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}

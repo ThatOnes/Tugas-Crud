@@ -1,0 +1,150 @@
+
+<section id="manga-gallery" class="manga-gallery">
+        <h2>Manga Populer</h2>
+        <div class="manga-grid" id="mangaGrid">
+            <!-- Manga 1 -->
+            <div class="manga-card" data-title="One Piece">
+                <img src="/ProjectRizky/img1/op.png" alt="Manga 1">
+                <h3>One Piece</h3>
+                <p>Genre: Petualangan</p>
+            </div>
+            <!-- Manga 2 -->
+            <div class="manga-card" data-title="Naruto">
+                <img src="/ProjectRizky/img1/nt.png" alt="Manga 2">
+                <h3>Naruto</h3>
+                <p>Genre: Aksi</p>
+            </div>
+            <!-- Manga 3 -->
+            <div class="manga-card" data-title="Attack on Titan">
+                <img src="/ProjectRizky/img1/aot.png" alt="Manga 3">
+                <h3>Attack on Titan</h3>
+                <p>Genre: Fantasi</p>
+            </div>
+            <!-- Manga 4 -->
+            <div class="manga-card" data-title="Demon Slayer">
+                <img src="/ProjectRizky/img1/ds.png" alt="Manga 4">
+                <h3>Demon Slayer</h3>
+                <p>Genre: Aksi</p>
+            </div>
+            <!-- Manga 5 -->
+            <div class="manga-card" data-title="My Hero Academia">
+                <img src="/ProjectRizky/img1/mh.png" alt="Manga 5">
+                <h3>My Hero Academia</h3>
+                <p>Genre: Aksi</p>
+            </div>
+            <!-- Manga 6 -->
+            <div class="manga-card" data-title="Tokyo Revengers">
+                <img src="/ProjectRizky/img1/tr.png" alt="Manga 6">
+                <h3>Tokyo Revengers</h3>
+                <p>Genre: Aksi</p>
+            </div>
+            <!-- Manga 7 -->
+            <div class="manga-card" data-title="Bleach">
+                <img src="/ProjectRizky/img1/b.png" alt="Manga 7">
+                <h3>Bleach</h3>
+                <p>Genre: Fantasi</p>
+            </div>
+            <!-- Manga 8 -->
+            <div class="manga-card" data-title="Fairy Tail">
+                <img src="/ProjectRizky/img1/ft.png" alt="Manga 8">
+                <h3>Fairy Tail</h3>
+                <p>Genre: Petualangan</p>
+            </div>
+            <!-- Manga 9 -->
+            <div class="manga-card" data-title="Black Clover">
+                <img src="/ProjectRizky/img2/bc.png" alt="Manga 9">
+                <h3>Black Clover</h3>
+                <p>Genre: Aksi</p>
+            </div>
+            <!-- Manga 10 -->
+            <div class="manga-card" data-title="Hunter x Hunter">
+                <img src="/ProjectRizky/img2/hxh.png" alt="Manga 10">
+                <h3>Hunter x Hunter</h3>
+                <p>Genre: Petualangan</p>
+            </div>
+            <!-- Manga 11 -->
+            <div class="manga-card" data-title="Fullmetal Alchemist">
+                <img src="/ProjectRizky/img2/fm.png" alt="Manga 11">
+                <h3>Fullmetal Alchemist</h3>
+                <p>Genre: Fantasi</p>
+            </div>
+            <!-- Manga 12 -->
+            <div class="manga-card" data-title="One Punch Man">
+                <img src="/ProjectRizky/img2/op.png" alt="Manga 12">
+                <h3>One Punch Man</h3>
+                <p>Genre: Aksi</p>
+            </div>
+            <!-- Manga 13 -->
+            <div class="manga-card" data-title="Sword Art Online">
+                <img src="/ProjectRizky/img2/sao.png" alt="Manga 13">
+                <h3>word Art Online</h3>
+                <p>Genre: isekai</p>
+            </div>
+            <!-- Manga 14 -->
+            <div class="manga-card" data-title="Death Note">
+                <img src="/ProjectRizky/img2/dn.png" alt="Manga 14">
+                <h3>Death Note</h3>
+                <p>Genre: Misteri</p>
+            </div>
+            <!-- Manga 15 -->
+            <div class="manga-card" data-title="Dragon Ball">
+                <img src="/ProjectRizky/img2/dg.png" alt="Manga 15">
+                <h3>Dragon Ball</h3>
+                <p>Genre: Petualangan</p>
+            </div>
+            <!-- Manga 16 -->
+            <div class="manga-card" data-title="Tokyo Ghoul">
+                <img src="/ProjectRizky/img2/tg.png" alt="Manga 16">
+                <h3>Tokyo Ghoul</h3>
+                <p>Genre: Horror</p>
+            </div>
+            <!-- Manga 17 -->
+            <div class="manga-card" data-title="Blue Box">
+                <img src="/ProjectRizky/img3/bb.png" alt="Manga 17">
+                <h3>Blue Box</h3>
+                <p>Genre: Slice Of Life</p>
+            </div>
+            <!-- Manga 18 -->
+            <div class="manga-card" data-title="Chainsaw Man">
+                <img src="/ProjectRizky/img3/cm.png" alt="Manga 18">
+                <h3>Chainsaw Man</h3>
+                <p>Genre: Aksi</p>
+            </div>
+                    <!-- Manga 19 -->
+            <div class="manga-card" data-title="Dandadan">
+                <img src="/ProjectRizky/img3/dd.png" alt="Manga 19">
+                <h3>Dandadan</h3>
+                <p>Genre: Petualangan</p>
+            </div>
+                    <!-- Manga 20 -->
+             <div class="manga-card" data-title="Jujutsu Kaisen">
+                <img src="/ProjectRizky/img3/jjk.png" alt="Manga 20">
+                <h3>Jujutsu Kaisenl</h3>
+                <p>Genre: Aksi</p>
+            </div>
+                    <!-- Manga 21 -->
+            <div class="manga-card" data-title="Kaiju No8">
+                <img src="/ProjectRizky/img3/k8.png" alt="Manga 21">
+                <h3>Kaiju No8</h3>
+                <p>Genre: Aksi</p>
+            </div>
+                    <!-- Manga 22 -->
+            <div class="manga-card" data-title="The Art Of Nausicaa">
+                <img src="/ProjectRizky/img3/nw.png" alt="Manga 22">
+                <h3>The Art Of Nausicaa</h3>
+                <p>Genre: Petualangan</p>
+            </div>
+                    <!-- Manga 23 -->
+            <div class="manga-card" data-title="Oshi No Ko">
+                <img src="/ProjectRizky/img3/osk.png" alt="Manga 23">
+                <h3>Oshi No Ko</h3>
+                <p>Genre: Misteri</p>
+            </div>
+                    <!-- Manga 24 -->
+            <div class="manga-card" data-title="The Promised Neverland">
+                <img src="/ProjectRizky/img3/pn.png" alt="Manga 24">
+                <h3>The Promised Neverland</h3>
+                <p>Genre: Psycological</p>
+            </div>
+        </div>
+</section>
