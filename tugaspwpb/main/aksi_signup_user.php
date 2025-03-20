@@ -1,5 +1,6 @@
 <?php
 include 'koneksi.php';
+session_start();
 
 header('Content-Type: application/json');
 
@@ -26,11 +27,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $row = mysqli_fetch_assoc($result_max_id);
     $new_id = $row['new_id'] ?? 1;
 
+    // Set gambar profil default
+    $default_picture = 'default.png';
+
     // Simpan data pengguna ke database
-    $query_insert = "INSERT INTO userav (ID, username, password) VALUES ('$new_id', '$username', '$password')";
+    $query_insert = "INSERT INTO userav (ID, username, password, picture) VALUES ('$new_id', '$username', '$password', '$default_picture')";
     if (mysqli_query($koneksi, $query_insert)) {
+        // Buat sesi untuk pengguna baru
+        $_SESSION['user_id'] = $new_id;
+        $_SESSION['username'] = $username;
+        $_SESSION['picture'] = $default_picture;
+
         // Berhasil, kirim respons dengan URL tujuan
-        echo json_encode(['status' => 'success', 'message' => 'Registrasi berhasil! Silakan login.', 'redirect' => 'user_page.php']);
+        echo json_encode(['status' => 'success', 'message' => 'Registrasi berhasil!', 'redirect' => 'user_page.php']);
     } else {
         echo json_encode([
             'status' => 'error',
@@ -41,4 +50,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     echo json_encode(['status' => 'error', 'message' => 'Akses tidak valid!']);
 }
-?>

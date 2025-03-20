@@ -1,8 +1,20 @@
+<?php
+session_start();
+$is_logged_in = isset($_SESSION['user_id']);
+$username = $is_logged_in ? $_SESSION['username'] : null;
+$profile_picture = $is_logged_in ? ($_SESSION['picture'] ?: 'default.png') : null;
+
+// Pastikan jalur file gambar benar
+$profile_picture_path = $is_logged_in ? "/tugaspwpb/images/uploads/" . htmlspecialchars($profile_picture) : null;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="/tugaspwpb/images/logo/AV2.png">
     <link href="/tugaspwpb/css/style.css" rel="stylesheet">
     <script src="../js/script.js " defer></script>
@@ -23,10 +35,18 @@
             </ul>
         </div>
         <div class="navbar-right">
-        <button class="btn-login" onclick="openLoginModal()">Sign in</button>
+            <?php if ($is_logged_in): ?>
+                <div class="profile-container" onclick="location.href='user_page.php'">
+                    <img src="<?php echo $profile_picture_path; ?>" alt="Profile Picture" class="profile-picture" style="border: 2px solid black; border-radius: 50%; width: 40px; height: 40px;">
+                    <span class="username"><?php echo htmlspecialchars($username); ?></span>
+                </div>
+            <?php else: ?>
+                <button class="btn-login" onclick="openLoginModal()">Sign in</button>
+            <?php endif; ?>
         </div>
     </nav>
 </header>
+
 
 
 
@@ -78,13 +98,6 @@
 
 
 
-
-<script>
-    // Menampilkan modal sign-up jika ada pesan error
-    <?php if (isset($_GET['pesan'])): ?>
-        openSignUpModal();
-    <?php endif; ?>
-</script>
 <!-- Intro -->
     <section class="intro">
         <div class="container">
