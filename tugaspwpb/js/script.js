@@ -207,3 +207,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //index.php end
+
+
+
+//user_page.php start
+function showLogoutPopout() {
+    document.getElementById('logoutPopout').style.display = 'flex';
+}
+
+function hideLogoutPopout() {
+    document.getElementById('logoutPopout').style.display = 'none';
+}
+
+function confirmLogout() {
+    window.location.href = "user_page.php?logout=true";
+}
+
+
+
+function showGiftSettingsPopout() {
+    document.getElementById('gift-settingsPopout').style.display = 'flex';
+}
+
+function hideGiftSettingsPopout() {
+    document.getElementById('gift-settingsPopout').style.display = 'none';
+}
+
+
+
+
+
+
+
+
+//user_page.php end

@@ -1,3 +1,13 @@
+<?php
+session_start();
+$is_logged_in = isset($_SESSION['user_id']);
+$username = $is_logged_in ? $_SESSION['username'] : null;
+$profile_picture = $is_logged_in ? ($_SESSION['picture'] ?: 'default.png') : null;
+
+// Pastikan jalur file gambar benar
+$profile_picture_path = $is_logged_in ? "/tugaspwpb/images/uploads/" . htmlspecialchars($profile_picture) : null;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +19,14 @@
 <body>
 <nav class="navbar">
     <div class="navbar-left">
-    <button class="btn-login" onclick="openLoginModal()">Login</button>
+        <?php if ($is_logged_in): ?>
+            <div class="profile-container" onclick="location.href='user_page.php'">
+                <img src="<?php echo $profile_picture_path; ?>" alt="Profile Picture" class="profile-picture" style="border-radius: 50%; width: 40px; height: 40px;">
+                <span class="username"><?php echo htmlspecialchars($username); ?></span>
+            </div>
+        <?php else: ?>
+            <button class="btn-login" onclick="openLoginModal()">Sign in</button>
+        <?php endif; ?>
     </div>
     <div class="navbar-center">
         <img src="../images/logo/AV1.png" alt="Logo" class="logo">
@@ -71,13 +88,20 @@
                         </td>
                         <td class="buttons">
                             <a href="edit.php?ID=<?php echo $d['ID']; ?>" class="edit-button">Edit</a>
-                            <a href="hapus.php?id=<?php echo $d['ID']; ?>" class="delete-button" onclick="confirmDeletion(event)">Hapus</a>
+                            <a href="hapus.php?id=<?php echo $d['ID']; ?>" class="delete-button" onclick="showPopout(event, '<?php echo $d['ID']; ?>')">Hapus</a>
                         </td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
     </div>
+    <div class="popout" id="delete-popout">
+    <div class="box">
+        <p>Apakah Anda yakin ingin menghapus data ini?</p>
+        <button class="confirm" onclick="confirmDeletion()">Ya, Hapus</button>
+        <button class="cancel" onclick="closePopout()">Batal</button>
+    </div>
+</div>
 
 <!-- footer -->
 
@@ -114,12 +138,28 @@
 </footer> 
 
     <script>
-        function confirmDeletion(event) {
-            const userConfirmed = confirm("Apakah Anda yakin ingin menghapus data ini?");
-            if (!userConfirmed) {
-                event.preventDefault();
-            }
-        }
+let deleteId = null;
+
+function showPopout(event, id) {
+    event.preventDefault(); // Mencegah tautan default
+    deleteId = id;
+    const popout = document.getElementById('delete-popout');
+    popout.style.display = 'flex'; // Menampilkan pop-up
+}
+
+function closePopout() {
+    const popout = document.getElementById('delete-popout');
+    popout.style.display = 'none'; // Menyembunyikan pop-up
+    deleteId = null; // Reset ID
+}
+
+function confirmDeletion() {
+    if (deleteId) {
+        window.location.href = `hapus.php?id=${deleteId}`;
+    }
+}
+
+
 
 
         function filterTable() {

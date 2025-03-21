@@ -1,54 +1,4 @@
-<?php
-session_start();
-include 'koneksi.php';
-
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit;
-}
-
-// Ambil data user dari sesi
-$user_id = $_SESSION['user_id'];
-$username = $_SESSION['username'];
-$picture = $_SESSION['picture'];
-
-// Jika ada permintaan untuk mengunggah foto profil baru
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['profile_picture'])) {
-    $file = $_FILES['profile_picture'];
-    $upload_dir = '../images/uploads/';
-
-    // Pastikan direktori upload ada
-    if (!is_dir($upload_dir)) {
-        mkdir($upload_dir, 0755, true);
-    }
-
-    $file_name = uniqid() . '_' . basename($file['name']);
-    $target_file = $upload_dir . $file_name;
-
-    // Validasi dan unggah file
-    if (move_uploaded_file($file['tmp_name'], $target_file)) {
-        // Perbarui gambar profil di database
-        $query = "UPDATE userav SET picture = '$file_name' WHERE ID = $user_id";
-        mysqli_query($koneksi, $query);
-
-        // Perbarui sesi
-        $_SESSION['picture'] = $file_name;
-        header('Location: user_page.php');
-        exit;
-    } else {
-        $error = 'Gagal mengunggah foto. Coba lagi.';
-    }
-}
-
-// Tombol logout
-if (isset($_GET['logout'])) {
-    session_destroy();
-    header('Location: index.php');
-    exit;
-}
-?>
-
-
+<?php include 'user_page_code.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,6 +8,7 @@ if (isset($_GET['logout'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link href="../css/user_page.css" rel="stylesheet">
+    <script src="../js/script.js"></script>
     <title>User Page</title>
 </head>
 <body>
@@ -84,13 +35,23 @@ if (isset($_GET['logout'])) {
     </div>
 
     <div class="actions">
-        <button>Settings</button>
         <?php if ($user_id == 0): ?>
-            <button onclick="window.location.href='admin.php'">Halaman Admin</button>
+                <button onclick="window.location.href='admin.php'">Halaman Admin</button>
         <?php endif; ?>
+        <button onclick="showGiftSettingsPopout()">Settings</button>
         <button class="logout" onclick="showLogoutPopout()">Log Out</button>
     </div>
 </div>
+
+<div class="gift-popout" id="gift-settingsPopout">
+    <div class="gift-box">
+        <p>Under Construction</p>
+        <img src="../images/logo/1.gif" alt="Gift" width="100" height="100">
+        <button class="gift-cancel" onclick="hideGiftSettingsPopout()">Close</button>
+    </div>
+</div>
+
+
 
 <div class="popout" id="logoutPopout">
     <div class="box">
@@ -100,19 +61,8 @@ if (isset($_GET['logout'])) {
     </div>
 </div>
 
-    <script>
-        function showLogoutPopout() {
-            document.getElementById('logoutPopout').style.display = 'flex';
-        }
 
-        function hideLogoutPopout() {
-            document.getElementById('logoutPopout').style.display = 'none';
-        }
 
-        function confirmLogout() {
-            window.location.href = "user_page.php?logout=true";
-        }
-    </script>
 
 <footer class="footer" style="margin-top: 100px;">
       <div class="footer-container">

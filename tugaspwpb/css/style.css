@@ -137,7 +137,7 @@ body {
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        border: 2px solid #0000;
+        border: 3px solid #ffffff;
         object-fit: cover;
         margin-right: 10px;
     }
@@ -589,7 +589,7 @@ label {
 }
 
 .footer-section ul li a:hover {
-    color: lightblue; 
+    color: #e74c3c; 
 }
 
 .social-icons {
@@ -605,7 +605,7 @@ label {
     width: 40px; 
     height: 40px; 
     background-color: white; 
-    color: royalblue; 
+    color:  #e74c3c ; 
     border-radius: 50%; 
     text-decoration: none; 
     transition: transform 0.3s ease, background-color 0.3s ease;

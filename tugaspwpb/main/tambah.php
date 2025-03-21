@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/ProjectRizky/css/tambah.css" rel="stylesheet">
+    <link href="../css/tambah.css" rel="stylesheet">
     <title>Tambah Buku</title>
 </head>
 <body>
@@ -12,10 +12,6 @@
         <h2>Tambah Buku</h2>
         <form method="post" action="tambah_aksi.php" enctype="multipart/form-data">
             <table>
-                <tr>
-                    <td><label for="ID">ID</label></td>
-                    <td><input type="text" name="ID" id="ID" required></td>
-                </tr>
                 <tr>
                     <td><label for="judul">Judul Buku</label></td>
                     <td><input type="text" name="judul" id="judul" required></td>

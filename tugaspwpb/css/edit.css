@@ -118,6 +118,11 @@ img {
 
 #image-preview {
     display: none;
-    margin-top: 10px;
-    text-align: center;
+    margin: 10px auto; 
+    max-width: 200px; 
+    object-fit: contain;
+    border: 1px solid #555; 
+    border-radius: 5px;
+    background-color: #1c1c1c;
 }
+

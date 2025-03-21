@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/ProjectRizky/css/edit.css" rel="stylesheet">
+    <link href="../css/edit.css" rel="stylesheet">
     <title>Edit Manga</title>
 </head>
 <body>
@@ -48,7 +48,7 @@
             </table>
         </form>
     </div>
-
+    
     <script>
         function previewImage() {
             const file = document.getElementById("image-input").files[0];

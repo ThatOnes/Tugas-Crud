@@ -37,7 +37,7 @@ $profile_picture_path = $is_logged_in ? "/tugaspwpb/images/uploads/" . htmlspeci
         <div class="navbar-right">
             <?php if ($is_logged_in): ?>
                 <div class="profile-container" onclick="location.href='user_page.php'">
-                    <img src="<?php echo $profile_picture_path; ?>" alt="Profile Picture" class="profile-picture" style="border: 2px solid black; border-radius: 50%; width: 40px; height: 40px;">
+                    <img src="<?php echo $profile_picture_path; ?>" alt="Profile Picture" class="profile-picture" style="border-radius: 50%; width: 40px; height: 40px;">
                     <span class="username"><?php echo htmlspecialchars($username); ?></span>
                 </div>
             <?php else: ?>

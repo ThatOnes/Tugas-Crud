@@ -1,8 +1,16 @@
 <?php
 include 'koneksi.php';
 
+// Mendapatkan ID maksimum dari database
+$queryMaxID = "SELECT MAX(ID) AS maxID FROM dbav";
+$result = mysqli_query($koneksi, $queryMaxID);
+$row = mysqli_fetch_assoc($result);
+$maxID = $row['maxID'];
+
+// Menentukan ID baru
+$newID = $maxID + 1;
+
 // Mengambil data dari form
-$ID = $_POST['ID'];
 $judul = $_POST['judul'];
 $genre = $_POST['genre'];
 $episode = $_POST['episode'];
@@ -22,7 +30,7 @@ if (!empty($_FILES['gambar']['name'])) {
 
 // Menyimpan data ke database
 $query = "INSERT INTO dbav (ID, judul, genre, episode, gambar) 
-          VALUES ('$ID', '$judul', '$genre', '$episode', '$gambar')";
+          VALUES ('$newID', '$judul', '$genre', '$episode', '$gambar')";
 if (mysqli_query($koneksi, $query)) {
     header("Location: admin.php"); // Redirect ke halaman admin
     exit();
