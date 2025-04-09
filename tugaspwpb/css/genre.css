@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 60px;
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: white;
+}
+.container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: larger;
+}
+
+.navbar {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #252525; 
+    padding: 0 20px;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar-left ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px; 
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-left a {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar-left a:hover {
+    background-color: #333;
+}
+
+.navbar-left {
+display: flex;
+align-items: center; /* Menyelaraskan logo dan teks secara vertikal */
+}
+
+.navbar-left .logo {
+width: 40px; /* Ukuran logo */
+height: auto;
+margin-right: 15px; /* Jarak antara logo dan menu */
+}
+
+
+.navbar-right {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-right button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+    color: white;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar-right button:hover {
+    background-color: #c0392b;
+}
+
+/* Tombol Genre */
+.genre-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar tombol */
+    margin-top: 80px; /* Mengurangi jarak dengan navbar */
+}
+
+.genre-buttons button {
+    padding: 12px 24px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.genre-buttons button:hover {
+    background-color: #c0392b;
+}
+
+.genre-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.genre-title h1 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.manga-gallery {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 40px 0;
+}
+
+.manga-gallery h2 {
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+.manga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.manga-card {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    width: 150px;
+}
+
+.manga-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.manga-card h3 {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.manga-card p {
+    font-size: 0.9em;
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 1em;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-link {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+
+.modal {
+    display: none; /* Modal tersembunyi secara default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna transparan */
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+    }
+    
+    
+    .modal.show {
+    opacity: 1;  /* Modal muncul saat kelas 'show' ditambahkan */
+    display: flex;
+    }
+    
+    
+    
+    .modal-content {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        border-radius: 5px;
+        width: 300px;
+        text-align: center;
+    }
+    
+    .modal input {
+        padding: 10px;
+        margin: 10px 0;
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .modal button {
+        padding: 10px 20px;
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    
+    .modal button:hover {
+        background-color: #c0392b;
+    }
+    
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .contact-section {
+        background-color: #252525;
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+        border-radius: 8px;
+        margin-top: 40px;
+        }
+        
+        .contact-section h2 {
+        color: #e74c3c;
+        font-size: 2em;
+        margin-bottom: 20px;
+        }
+        
+        .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+        }
+        
+        .social-icon img {
+        transition: transform 0.3s;
+        border-radius: 50%;
+        border: 2px solid #e74c3c;
+        padding: 5px;
+        }
