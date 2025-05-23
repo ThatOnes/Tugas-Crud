@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: monospace;
+    display: flex;
+    background-color: #1c1c1c;
+    color: white;
+    height: 100vh;
+    font-size: large;
+    scrollbar-color: #333 #1c1c1c;
+    scrollbar-width: thin;
+}
+
+
+/* Untuk browser berbasis Webkit */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px; /* Scrollbar horizontal */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333; /* Warna thumb scrollbar */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444; /* Warna thumb saat hover */
+}
+
+::-webkit-scrollbar-track {
+    background: #1c1c1c; /* Warna track scrollbar */
+    border-radius: 10px;
+}
+
+
+
+
+.sidebar {
+    width: 250px;
+    background-color: #2c2c2c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.brand-name {
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+}
+
+.admin-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-picture {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid white; 
+}
+
+.admin-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Default style untuk link (merah tomat) */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    background-color: #e74c3c; /* merah tomat */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Hover default */
+.nav-links a:hover {
+    background-color: #c0392b;
+}
+
+/* Tambah Data warna hijau */
+.nav-links a[href="tambah.php"] {
+    background-color: #27ae60; /* hijau */
+}
+
+.nav-links a[href="tambah.php"]:hover {
+    background-color: #1e8449; /* hijau gelap */
+}
+
+/* Inbox background putih, text merah tomat */
+.nav-links a[href="inbox.php"] {
+    background-color: white;
+    color:  #2c2c2c;
+}
+
+.nav-links a[href="inbox.php"]:hover {
+    background-color: #ddd; /* abu terang saat hover */
+    color:  #1c1c1c; /* merah gelap untuk teks */
+}
+
+.bottom-link {
+    margin-top: 360px;
+    width: 100%;
+    text-align: center;
+}
+
+.bottom-link a {
+    text-decoration: none;
+    color: white;
+    background-color: #e74c3c;
+    padding: 15px 20px; /* Sesuaikan padding agar lebih ramping */
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s;
+    white-space: nowrap; /* Pastikan teks tidak turun ke bawah */
+}
+
+.bottom-link a:hover {
+    background-color: #c0392b;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+header h2 {
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar select {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2c2c2c;
+    color: white;
+    outline: none;
+}
+
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2c2c2c; 
+    color: white; 
+    outline: none;
+    transition: outline 0.3s, box-shadow 0.3s; 
+}
+
+.search-bar input:focus {
+    outline: 2px solid #e74c3c; 
+    box-shadow: 0 0 5px #e74c3c; 
+}
+
+.table-container {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+table tr:hover {
+    background-color: #3a3a3a;
+}
+
+.thumbnail {
+    width: 80px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 6px 12px;
+    margin: 2px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+.edit-btn {
+    background-color: #3498db;
+}
+
+.edit-btn:hover {
+    background-color: #2980b9;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
