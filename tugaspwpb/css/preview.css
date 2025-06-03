@@ -1,0 +1,70 @@
+.container {
+    max-width: 1200px;
+    margin: 100px auto;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.details {
+    flex: 1;
+}
+
+.details h1 {
+    margin: 0 0 20px;
+    color: #e74c3c;
+}
+
+.details p {
+    margin: 5px 0;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.details .description {
+    margin-top: 20px;
+    font-size: 1em;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.episode-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.watch-btn {
+    padding: 10px 15px;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.watch-btn:hover {
+    background-color: #c0392b;
+}
+
+.watch-btn.disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
